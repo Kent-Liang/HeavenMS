@@ -37,7 +37,7 @@ import provider.wz.MapleDataType;
 import tools.Pair;
 
 public class MapleLifeFactory {
-    private static String wzPath = "../../wz";
+    private static String wzPath = "C:\\Nexon\\MapleStory";
     private static MapleDataProvider data = MapleDataProviderFactory.getDataProvider(new File(wzPath + "/Mob.wz"));
     private final static MapleDataProvider stringDataWZ = MapleDataProviderFactory.getDataProvider(new File(wzPath + "/String.wz"));
     private static MapleData mobStringData = stringDataWZ.getData("Mob.img");

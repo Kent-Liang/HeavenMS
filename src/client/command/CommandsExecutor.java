@@ -112,10 +112,10 @@ public class CommandsExecutor {
             client.getPlayer().yellowMessage("Command '" + commandName + "' is not available. See @commands for a list of available commands.");
             return;
         }
-        if (client.getPlayer().gmLevel() < command.getRank()){
-            client.getPlayer().yellowMessage("You do not have permission to use this command.");
-            return;
-        }
+//        if (client.getPlayer().gmLevel() < command.getRank()){
+//            client.getPlayer().yellowMessage("You do not have permission to use this command.");
+//            return;
+//        }
         String[] params;
         if (lowercaseParams.length > 0 && !lowercaseParams[0].isEmpty()) {
             params = Arrays.copyOfRange(lowercaseParams, 0, lowercaseParams.length);
@@ -258,6 +258,7 @@ public class CommandsExecutor {
         addCommand("setstat", 2, SetStatCommand.class);
         addCommand("maxstat", 2, MaxStatCommand.class);
         addCommand("maxskill", 2, MaxSkillCommand.class);
+        addCommand("learnskill", 2, LearnSkillCommand.class);
         addCommand("resetskill", 2, ResetSkillCommand.class);
         addCommand("search", 2, SearchCommand.class);
         addCommand("jail", 2, JailCommand.class);
